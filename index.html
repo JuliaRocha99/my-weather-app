@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/fa625e27ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <style>
+      .buttonLink {
+        background: none !important;
+        border: solid;
+        padding: 0 !important;
+        font-family: arial, sans-serif;
+        font-size: 10px;
+        width: smaller;
+        color: #069;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+    <title>What is the weather like?</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col first">
+          <h1 class="city">
+            <div id="city"></div>
+            <div id="date"></div>
+          </h1>
+        </div>
+        <button id="currentLocation" onclick="currentLocation()">Current Location</button>
+        <script>
+          let today = new Date();
+          let days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ];
+          let d = new Date(today);
+          let dayName = days[d.getDay()];
+
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let min = ("0" + m).slice(-2);
+          document.getElementById("date").innerHTML =
+            `${dayName}, ${h}:${min}`;
+        </script>
+
+        <script>
+          let enterCity2 = prompt("Enter city?");
+          document.getElementById("city").innerHTML = enterCity2.trim();
+        </script>
+
+        <script>
+          function fahrenheitConverter() {
+            let celsius_temperature = document.getElementById(
+              "celsius-temperature"
+            ).innerHTML;
+            celsius_temperature = parseFloat(celsius_temperature);
+            document.getElementById("outputFahrenheit").innerHTML =
+              celsius_temperature * 1.8 + 32;
+          }
+
+          function celsiusConverter() {
+            let celsius_temperature = document.getElementById(
+              "celsius-temperature"
+            ).innerHTML;
+            document.getElementById(
+              "outputFahrenheit"
+            ).innerHTML = celsius_temperature;
+            document.getElementById("FahrneihtSymbol").innerHTML = "C";
+          }
+        </script>
+        <div class="col input-group mb-3">
+          <input
+            type="text"
+            style="width: 100%;"
+            class="form-control"
+            placeholder="Enter a city..."
+            id="searchCity"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary border-0 art"
+              type="submit"
+              id="eyes"
+              onclick="showForecast()"
+            >
+              🔎
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="rowing" class="col temps">
+          <div class="row">
+            <div class="col-md-4">
+              <i class="fas fa-sun"></i>
+              <span id="celsius-temperature" onclick="celsiusConverter()"
+                >17</span
+              >ºC
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-sun"></i>
+              <span id="outputFahrenheit"></span>
+              <span id="FahrneihtSymbol">ºF</span>
+            </div>
+            <button class="buttonLink" onclick="fahrenheitConverter()">
+              Convert Temperature
+            </button>
+            <div class="col-md-4 maxmin">
+              max 18 ºC
+              <br />
+              min 8ºC
+            </div>
+            <div class="col-md-4">58% hum<br /></div>
+          </div>
+        </div>
+        <div class="col message">
+          <img
+            class="img-fluid center"
+            width="500px"
+            height="250px"
+            src="https://media.giphy.com/media/lyVNcb1n5Ob0Q/giphy.gif"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col third">
+          <i class="fas fa-sun"></i>
+          <h3>MON</h3>
+        </div>
+        <div class="col third">
+          <i class="fas fa-cloud"></i>
+          <h3>TUE</h3>
+        </div>
+        <div class="col third">
+          <i class="fas fa-sun"></i>
+          <h3>WED</h3>
+        </div>
+        <div class="col third">
+          <i class="fas fa-sun"></i>
+          <h3>THU</h3>
+        </div>
+        <div class="col third">
+          <i class="fas fa-cloud"></i>
+          <h3>FRI</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

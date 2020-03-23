@@ -1,0 +1,115 @@
+.container {
+  margin-top: 50px;
+  background-color: white;
+  padding: 0%;
+  border-width: 3px;
+  border-color: #b3ccff;
+  border-style: solid;
+}
+
+.inlining {
+  display: inline;
+}
+
+.row {
+  margin-top: 60px;
+}
+
+.city {
+  font-size: 22px;
+  color: black;
+  word-spacing: 5px;
+  position: absolute;
+  left: 2px;
+}
+
+.temps {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 30px;
+  position: center;
+}
+
+.maxmin {
+  font-size: 25px;
+  position: center;
+}
+
+h2 h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  color: lightsalmon;
+}
+
+.i {
+  color: #ffd700;
+  size: 75px;
+}
+
+.message {
+  position: relative;
+  right: 19px;
+  width: 2px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.art {
+  position: relative;
+  right: 10px;
+}
+
+.first {
+  margin-left: 15px;
+  display: block;
+  margin-left: 65px;
+  width: 50%;
+}
+
+.second {
+  margin-right: 20px;
+  display: inline;
+}
+.third {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  color: #ffd700;
+  margin: 20px;
+  position: center;
+}
+
+.imgResponsive {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 320px) {
+  .searchbox {
+    width: 20px;
+    height: 3px;
+  }
+}
+
+.searchbox {
+  width: 250px;
+  height: 53px;
+}
+
+#rowing {
+  position: relative;
+  left: 30px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 1px;
+  border-color: #b3ccff;
+}
