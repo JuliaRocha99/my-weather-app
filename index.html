@@ -43,7 +43,9 @@
             <div id="date"></div>
           </h1>
         </div>
-        <button id="currentLocation" onclick="currentLocation()">Current Location</button>
+        <button id="currentLocation" onclick="currentLocation()">
+          Current Location
+        </button>
         <script>
           let today = new Date();
           let days = [
@@ -61,8 +63,7 @@
           let h = today.getHours();
           let m = today.getMinutes();
           let min = ("0" + m).slice(-2);
-          document.getElementById("date").innerHTML =
-            `${dayName}, ${h}:${min}`;
+          document.getElementById("date").innerHTML = `${dayName}, ${h}:${min}`;
         </script>
 
         <script>
@@ -167,7 +168,11 @@
         </div>
       </div>
     </div>
-<a href="https://github.com/JuliaRocha99/" target="_blank"></a>
-Open-source code</a> ", by Júlia Rocha"
+    <p>
+      <a href="https://github.com/JuliaRocha99/" target="_blank"
+        >Open-source code</a
+      >
+      , by Júlia Rocha
+    </p>
   </body>
 </html>
