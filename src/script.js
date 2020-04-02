@@ -1,59 +1,3 @@
-function allright() {
-  navigator.geolocation.getCurrentPosition(showWeather);
-}
-
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20
-  },
-
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100
-  },
-
-  moscow: {
-    temp: -5,
-    humidity: 20
-  }
-};
-
-let arrayCities = false;
-let enterCity = prompt("Enter city?");
-
-let keys = Object.keys(weather);
-
-for (let i = 0; i < keys.length; i++) {
-  if (!(enterCity.toLowerCase().trim() === keys[i].trim())) {
-    if (i === keys.length - 1) {
-      arrayCities = true;
-      weather[keys[i]].temp = Math.round;
-    }
-    continue;
-  } else {
-    let fahrenheit = Math.round(weather[keys[i]].temp * 1.8 + 32);
-    alert(
-      `It is currently ${weather[keys[i]].temp} ºC ( ${fahrenheit} F) in ${enterCity.trim()} with a humidity of ${weather[keys[i]].humidity}%`
-    );
-    break;
-  }
-}
-
-if (arrayCities) {
-  alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${enterCity.toLowerCase()}`
-  );
-}
-
 function showForecast() {
   let searchCity = document.getElementById("searchCity").value.trim();
   let city = document.querySelector("#city");
@@ -79,8 +23,7 @@ function showWeather(position) {
   let lat = position.coords.latitude;
   console.log(lat);
   let lon = position.coords.longitude;
-  let url =
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`;
   $.get(
     "http://ipinfo.io",
     function(response) {
@@ -101,7 +44,7 @@ function showWeather(position) {
 }
 
 function currentLocation() {
-  if(navigator.geolocation) {
+  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showWeather);
   } else {
     alert("Geolocation not supported in this browser");
@@ -120,4 +63,3 @@ function convertToF(celsius) {
   let fahrenheit = (celsius * 9) / 5 + 32;
   return fahrenheit;
 }
-
