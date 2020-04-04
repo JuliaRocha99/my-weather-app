@@ -1,8 +1,11 @@
+body {
+  font-family: arial, sans-serif;
+}
+
 .buttonLink {
   background: none !important;
   border: solid;
   padding: 0 !important;
-  font-family: arial, sans-serif;
   font-size: 10px;
   width: smaller;
   color: #069;
@@ -11,7 +14,7 @@
 }
 
 .container {
-  margin: 40px auto;
+  margin: 30px auto;
   padding: 15px;
   border-color: lightgrey;
   border: 1px solid;
@@ -29,16 +32,12 @@
 }
 
 .city {
-  font-size: 22px;
+  font-size: 35px;
   color: black;
-  word-spacing: 5px;
-  position: absolute;
-  left: 2px;
+  left: 10px;
 }
 
 .temps {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 30px;
   position: center;
 }
@@ -48,29 +47,19 @@
   position: center;
 }
 
-h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 25px;
-  color: black;
-}
-
 h2 h3 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 15px;
   color: lightsalmon;
 }
 
 .i {
   color: #ffd700;
-  size: 50px;
+  size: 15px;
 }
 
 .message {
   position: relative;
-  right: 19px;
-  width: 2px;
+  width: 25px;
 }
 
 .center {
@@ -97,9 +86,7 @@ h2 h3 {
   display: inline;
 }
 .third {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   color: #ffd700;
   margin: 10px;
   position: center;
@@ -125,6 +112,10 @@ h2 h3 {
 #rowing {
   position: relative;
   left: 30px;
+}
+
+.col-md-4 {
+  font-size: 15px;
 }
 
 button {
