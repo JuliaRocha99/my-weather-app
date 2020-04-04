@@ -31,12 +31,6 @@ body {
   margin-top: 60px;
 }
 
-.city {
-  font-size: 35px;
-  color: black;
-  left: 10px;
-}
-
 .temps {
   font-size: 30px;
   position: center;
@@ -45,11 +39,6 @@ body {
 .maxmin {
   font-size: 25px;
   position: center;
-}
-
-h2 h3 {
-  font-size: 15px;
-  color: lightsalmon;
 }
 
 .i {
@@ -75,10 +64,10 @@ h2 h3 {
 }
 
 .first {
-  margin-left: 15px;
-  display: block;
-  margin-left: 65px;
+  margin-left: 10px;
   width: 50%;
+  font-size: 30px;
+  color: black;
 }
 
 .second {

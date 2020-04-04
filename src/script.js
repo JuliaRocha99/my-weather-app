@@ -63,3 +63,18 @@ function convertToF(celsius) {
   let fahrenheit = (celsius * 9) / 5 + 32;
   return fahrenheit;
 }
+
+function fahrenheitConverter() {
+  let celsius_temperature = document.getElementById("celsius-temperature")
+    .innerHTML;
+  celsius_temperature = parseFloat(celsius_temperature);
+  document.getElementById("outputFahrenheit").innerHTML =
+    celsius_temperature * 1.8 + 32;
+}
+
+function celsiusConverter() {
+  let celsius_temperature = document.getElementById("celsius-temperature")
+    .innerHTML;
+  document.getElementById("outputFahrenheit").innerHTML = celsius_temperature;
+  document.getElementById("FahrneihtSymbol").innerHTML = "C";
+}
