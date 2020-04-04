@@ -1,3 +1,19 @@
+.buttonLink {
+  background: none !important;
+  border: solid;
+  padding: 0 !important;
+  font-family: arial, sans-serif;
+  font-size: 10px;
+  width: smaller;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.div {
+  border: 5px;
+}
+
 .container {
   margin-top: 50px;
   background-color: white;
