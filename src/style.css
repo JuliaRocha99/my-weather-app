@@ -33,7 +33,6 @@ body {
 
 .temps {
   font-size: 30px;
-  position: center;
 }
 
 .maxmin {
@@ -58,20 +57,29 @@ body {
   width: 50%;
 }
 
+h2 {
+  font-size: 25px;
+  color: salmon;
+  padding: 8px;
+  display: block;
+  text-align: center;
+}
+
 .art {
   position: relative;
   right: 10px;
 }
 
 .first {
-  margin-left: 10px;
   width: 50%;
   font-size: 30px;
   color: black;
+  margin-left: 15px;
+  margin-bottom: 0px;
 }
 
 .second {
-  margin-right: 20px;
+  margin-left: 15px;
   display: inline;
 }
 .third {
@@ -112,4 +120,23 @@ button {
   height: 50px;
   border-radius: 1px;
   border-color: #b3ccff;
+}
+
+#temperature {
+  font-weight: 400;
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.clearfix {
+  display: block;
+  clear: both;
+  content: "";
 }

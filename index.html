@@ -24,9 +24,10 @@
   <body>
     <div>
       <div class="container">
-        <div class="row">
-          <div class="col first">
             <h2>What is the weather like today?</h2>
+        <div class="row">
+      
+          <div class="col first">
             <h1 class="city"></h1>
               <div id="city"></div>
               <div id="date"></div>
@@ -59,30 +60,21 @@
           </div>
         </div>
         <div class="row">
-          <div id="rowing" class="col temps">
-            <div class="row">
-              <div class="col-md-4">
-                <i class="fas fa-sun"></i>
-                <span id="celsius-temperature" onclick="celsiusConverter()"
-                  >17</span
-                >ºC
+          <!-- <div id="rowing" class="col temps"> -->
+            <!-- <div class="row"> -->
+              <div class="col-6">
+                <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="overcast clouds" id="icon" class="float-left">
+                <div class="float-left">
+                  <strong id="temperature">
+                    20
+                  </strong>
+                  <span class="units">
+                    <a href="#" id="celsius-link">ºC</a>
+                     | 
+                    <a href="#" id="fahrenheit-link">ºF</a>
+                  </span>
+                </div>
               </div>
-              <div class="col-md-4">
-                <i class="fas fa-sun"></i>
-                <span id="outputFahrenheit"></span>
-                <span id="FahrneihtSymbol">ºF</span>
-              </div>
-              <button class="buttonLink" onclick="fahrenheitConverter()">
-                Convert Temperature
-              </button>
-              <div class="col-md-4 maxmin">
-                max 18 ºC
-                <br />
-                min 8ºC
-              </div>
-              <div class="col-md-4">58% hum<br/></div>
-            </div>
-          </div>
           <div class="col message">
             <img
               class="img-fluid center"
