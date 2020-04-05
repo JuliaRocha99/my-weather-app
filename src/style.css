@@ -2,6 +2,11 @@ body {
   font-family: "Arvo", bold;
 }
 
+.credit {
+  position: absolute;
+  left: 100px;
+}
+
 .buttonLink {
   background: none !important;
   border: solid;
@@ -13,26 +18,44 @@ body {
   cursor: pointer;
 }
 
+.wrapper {
+  margin: auto;
+  padding: 2%;
+  margin-top: 20px;
+  height: 450px;
+  width: 750px;
+}
+
 .container {
   margin: 30px auto;
   padding: 15px;
-  /* border: 1px solid; */
-  /* border-radius: 5px; */
-  max-width: 750px;
   position: center;
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 0.5816701680672269) 0%,
     rgba(148, 187, 233, 0.5956757703081232) 100%
   );
+  /* background-size: 1mm 20mm; */
+  background-size: auto;
 }
 
+#smal {
+  /* margin: 300px; */
+  margin-top: 0px;
+  position: absolute;
+  top: 425px;
+  left: 150px;
+}
 .inlining {
   display: inline;
 }
 
 .row {
-  margin-top: 60px;
+  margin-top: 20px;
+}
+
+.row1 {
+  margin-top: 30px;
 }
 
 .temps {
@@ -51,14 +74,15 @@ body {
 
 .center {
   display: block;
-  margin: 0px;
+  margin: -20px;
   position: relative;
   width: 100%;
 }
 
 h2 {
-  font-size: 25px;
-  color: salmon;
+  font-size: 40px;
+  color: #cea7db;
+  text-shadow: 1px 1px 1px black;
   padding: 8px;
   display: block;
   text-align: center;
@@ -73,7 +97,9 @@ h2 {
   width: 50%;
   font-size: 30px;
   color: black;
-  margin-left: 15px;
+  text-shadow: 1px 1px 1px #cea7db;
+  padding: 0px;
+  margin-left: 50px;
   margin-bottom: 0px;
 }
 
@@ -165,16 +191,6 @@ button {
   content: "";
 }
 
-.wrapper {
-  /* max-width: 750px;
-  margin-top: 40px;
-  position: center;
-  text-align: center; */
-  margin: auto;
-  padding: 2%;
-  margin-top: 20px;
-}
-
 .wrapper2 {
   margin: auto;
   padding: 0px;
@@ -186,6 +202,16 @@ button {
   text-align: center;
   padding: 0px;
   position: relative;
-  right: 70px;
+  right: 90px;
   width: 250px;
+}
+
+#currentLocation {
+  padding-bottom: 45px;
+  height: 10px;
+  width: 120px;
+}
+
+#eyes {
+  padding-bottom: 45px;
 }
