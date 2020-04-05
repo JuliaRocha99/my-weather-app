@@ -23,7 +23,7 @@
   </head>
   <body>
     <div>
-      <div class="container">
+    <div class="wrapper container">
             <h2>What is the weather like today?</h2>
         <div class="row">
       
@@ -37,8 +37,6 @@
           <button id="currentLocation" onclick="currentLocation()">
             Current Location
           </button>
-
-
           <div class="col input-group mb-3">
             <input
               type="text"
@@ -62,7 +60,8 @@
         <div class="row">
           <!-- <div id="rowing" class="col temps"> -->
             <!-- <div class="row"> -->
-              <div class="col-6">
+              <!-- <div class="col-6"> -->
+                <div class="col-6">
                 <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="overcast clouds" id="icon" class="float-left">
                 <div class="float-left">
                   <strong id="temperature">
@@ -73,26 +72,26 @@
                      | 
                     <a href="#" id="fahrenheit-link">ºF</a>
                   </span>
-
-               
-                  
                 </div>
               </div>
-          <div class="col message">
-              <span class=weatherElements>
-                <ul>
-                  <li>Humidity:</li>
-                  <li>Wind:</li>
-                  <li>Precipitation:</li>
-                  </li>
-                </ul>
-              </span>
-            <!-- <img -->
-              <!-- class="img-fluid center"
-              width="250px"
-              height="250px"
+              <div col="col-sm">
+                <span class=weatherElements>
+                  <ul>
+                    <li>Humidity:</li>
+                    <li>Wind:</li>
+                    <li>Precipitation:</li>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+          <div class="col-sm message">
+           
+            <img
+              class="img-fluid center"
+              width="510"
+              height="250"
               src="https://media.giphy.com/media/lyVNcb1n5Ob0Q/giphy.gif"
-            /> -->
+            />
           </div>
         </div>
         <div class="row">
@@ -120,19 +119,14 @@
             <i class="fas fa-cloud"></i>
             <h3>FRI</h3>
           </div>
-        </div>
-
-        <p>
-          <small>
-            <a href="https://github.com/JuliaRocha99/" target="_blank"
-              >Open-source code</a
-            >
-            by Júlia Rocha
-          </small>
-        </p>
-      </div>
-    </div>
-
+        </div>   
+  </div>
+            <small class="wrapper2">
+              <a href="https://github.com/JuliaRocha99/" target="_blank">Open-source code</a>
+              by Júlia Rocha
+            </small>
+           
+</div>
     <script>let today = new Date();
       let days = [
         "Sunday",

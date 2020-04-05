@@ -1,12 +1,12 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Arvo", bold;
 }
 
 .buttonLink {
   background: none !important;
   border: solid;
   padding: 0 !important;
-  font-size: 10px;
+  font-size: 7px;
   width: smaller;
   color: #069;
   text-decoration: underline;
@@ -16,11 +16,15 @@ body {
 .container {
   margin: 30px auto;
   padding: 15px;
-  border-color: lightgrey;
-  border: 1px solid;
-  border-radius: 5px;
+  /* border: 1px solid; */
+  /* border-radius: 5px; */
   max-width: 750px;
   position: center;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.5816701680672269) 0%,
+    rgba(148, 187, 233, 0.5956757703081232) 100%
+  );
 }
 
 .inlining {
@@ -41,15 +45,15 @@ body {
 }
 
 .i {
-  color: #ffd700;
+  color: black;
   size: 15px;
 }
 
 .center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin: 0px;
+  position: relative;
+  width: 100%;
 }
 
 h2 {
@@ -76,22 +80,19 @@ h2 {
 .message {
   margin: 0;
   padding: 0;
+  width: 150px;
 }
 
 li {
   list-style: none;
   text-align: left;
   margin: 0;
-  padding: 10px;
-}
-
-.weatherElements {
 }
 
 .col-6 {
-  width: 100px;
-  padding: 10px;
-  margin: 0;
+  width: 250px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .second {
@@ -99,9 +100,16 @@ li {
   display: inline;
 }
 .third {
-  font-size: 10px;
-  color: #ffd700;
+  font-size: 20px;
+  color: black;
   margin: 10px;
+  position: center;
+}
+
+h3 {
+  font-size: 10px;
+  color: black;
+  margin: 0;
   position: center;
 }
 
@@ -155,4 +163,29 @@ button {
   display: block;
   clear: both;
   content: "";
+}
+
+.wrapper {
+  /* max-width: 750px;
+  margin-top: 40px;
+  position: center;
+  text-align: center; */
+  margin: auto;
+  padding: 2%;
+  margin-top: 20px;
+}
+
+.wrapper2 {
+  margin: auto;
+  padding: 0px;
+  position: absolute;
+  left: 335px;
+}
+
+.weatherElements {
+  text-align: center;
+  padding: 0px;
+  position: relative;
+  right: 70px;
+  width: 250px;
 }
