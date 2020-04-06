@@ -119,6 +119,7 @@ li {
   width: 250px;
   padding: 0px;
   margin: 0px;
+  text-transform: capitalize;
 }
 
 .second {

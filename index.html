@@ -15,20 +15,21 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="src/script.js"></script>
 
     <title>Weather App by JR</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/script.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-<div class="app">
-    <div class="wrapper container">
-            <h2>What is the weather like today?</h2>
+    <div class="app">
+      <div class="wrapper container">
+        <h2>What is the weather like today?</h2>
         <div class="row">
           <div class="col first">
             <h1>
               <div id="city"></div>
+
               <div id="date"></div>
             </h1>
           </div>
@@ -48,7 +49,7 @@
                 class="btn btn-outline-secondary border-0 art"
                 type="submit"
                 id="eyes"
-                onclick="showForecast()"
+                onclick="displayTemperature()"
               >
                 🔎
               </button>
@@ -56,40 +57,37 @@
           </div>
         </div>
         <div class="row">
-          <!-- <div id="rowing" class="col temps"> -->
-            <!-- <div class="row"> -->
-              <!-- <div class="col-6"> -->
-                <div class="col-6">
-                <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="overcast clouds" id="icon" class="float-left">
-                <div class="float-left">
-                  <strong id="temperature">
-            
-                  </strong>
-                  <span class="units">
-                    <a href="#" id="celsius-link">ºC</a>
-                     | 
-                    <a href="#" id="fahrenheit-link">ºF</a>
-                  </span>
-                </div>
-              </div>
-              <div col="col-sm">
-                <span class=weatherElements>
-                  <ul>
-                    <li>Humidity:</li>
-                    <li>Wind:</li>
-                    <li>Precipitation:</li>
-                    </li>
-                  </ul>
-                </span>
-              </div>
-          <div class="col-sm message">
-           
+          <div class="col-6">
             <img
-              class="img-fluid center"
+              src="http://openweathermap.org/img/wn/04d@2x.png"
+              alt="overcast clouds"
+              id="icon"
+              class="float-left"
+            />
+            <div class="float-left">
+              <strong id="temperature"> </strong>
+              <span class="units">
+                ºC |
+                <a href="#" id="fahrenheit-link">ºF</a>
+              </span>
+              <div id="description"></div>
+            </div>
+          </div>
+          <div col="col-sm">
+            <span class="weatherElements">
+              <ul>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: km/h</li>
+              </ul>
+            </span>
+          </div>
+          <div class="col-sm message">
+            <!-- <img -->
+            <!-- class="img-fluid center"
               width="510"
               height="250"
-              src="https://media.giphy.com/media/lyVNcb1n5Ob0Q/giphy.gif"
-            />
+              src="https://media.giphy.com/media/lyVNcb1n5Ob0Q/giphy.gif" -->
+            <!-- />  -->
           </div>
         </div>
         <div class="row">
@@ -117,14 +115,17 @@
             <i class="fas fa-cloud"></i>
             <h3>FRI</h3>
           </div>
-        </div>  
+        </div>
         <div class="credit">
-          <a href="https://github.com/JuliaRocha99/" target="_blank">Open-source code</a>
+          <a href="https://github.com/JuliaRocha99/" target="_blank"
+            >Open-source code</a
+          >
           by Júlia Rocha
-        </div>       
-</div>
+        </div>
       </div>
-    <script>let today = new Date();
+    </div>
+    <script>
+      let today = new Date();
       let days = [
         "Sunday",
         "Monday",
@@ -132,7 +133,7 @@
         "Wednesday",
         "Thursday",
         "Friday",
-        "Saturday"
+        "Saturday",
       ];
       let d = new Date(today);
       let dayName = days[d.getDay()];
@@ -140,6 +141,7 @@
       let h = today.getHours();
       let m = today.getMinutes();
       let min = ("0" + m).slice(-2);
-      document.getElementById("date").innerHTML = `${dayName}, ${h}:${min}`;</script>
+      document.getElementById("date").innerHTML = `${dayName}, ${h}:${min}`;
+    </script>
   </body>
 </html>
