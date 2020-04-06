@@ -4,12 +4,10 @@ function showForecast() {
   let celsiusTemperature = document.querySelector("#celsius-temperature");
   let outputFahrenheit = document.querySelector("#outputFahrenheit");
   $.getJSON(
-    `http://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=bf0050d8d22310df394fff19194582c3`,
-    function(date) {
+    `http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=bf0050d8d22310df394fff19194582c3&units=metric`,
+    function (date) {
       city.innerHTML = searchCity;
-      celsiusTemperature.innerHTML = Math.round(
-        convertKelvinToCelsius(date.main.temp)
-      );
+      celsiusTemperature.innerHTML = Math.round(response.date.main.temp);
       outputFahrenheit.innerHTML = Math.round(
         convertToF(convertKelvinToCelsius(date.main.temp))
       );
@@ -21,17 +19,16 @@ function showWeather(position) {
   let city = document.querySelector("#city");
   let apikey = "bf0050d8d22310df394fff19194582c3";
   let lat = position.coords.latitude;
-  console.log(lat);
   let lon = position.coords.longitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}`;
   $.get(
     "http://ipinfo.io",
-    function(response) {
+    function (response) {
       city.innerHTML = response.city;
     },
     "jsonp"
   );
-  $.getJSON(url, function(data) {
+  $.getJSON(url, function (data) {
     let celsiusTemperature = document.querySelector("#celsius-temperature");
     let outputFahrenheit = document.querySelector("#outputFahrenheit");
     celsiusTemperature.innerHTML = Math.round(
