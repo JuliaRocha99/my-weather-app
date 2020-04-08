@@ -18,6 +18,15 @@ body {
   cursor: pointer;
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
+#weather {
+  position: relative;
+  left: 137px;
+}
+
 .wrapper {
   margin: auto;
   padding: 2%;
@@ -52,6 +61,7 @@ body {
 
 .row {
   margin-top: 20px;
+  position: relative;
 }
 
 .row1 {
@@ -95,18 +105,12 @@ h2 {
 
 .first {
   width: 50%;
-  font-size: 30px;
+  font-size: 15px;
   color: black;
   text-shadow: 1px 1px 1px #cea7db;
   padding: 0px;
   margin-left: 50px;
   margin-bottom: 0px;
-}
-
-.message {
-  margin: 0;
-  padding: 0;
-  width: 150px;
 }
 
 li {
