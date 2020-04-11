@@ -44,12 +44,10 @@ h1 {
     rgba(238, 174, 202, 0.5816701680672269) 0%,
     rgba(148, 187, 233, 0.5956757703081232) 100%
   );
-  /* background-size: 1mm 20mm; */
   background-size: auto;
 }
 
 #smal {
-  /* margin: 300px; */
   margin-top: 0px;
   position: absolute;
   top: 425px;
@@ -105,7 +103,7 @@ h2 {
 
 .first {
   width: 50%;
-  font-size: 15px;
+  font-size: 22px;
   color: black;
   text-shadow: 1px 1px 1px #cea7db;
   padding: 0px;
@@ -130,6 +128,7 @@ li {
   margin-left: 15px;
   display: inline;
 }
+
 .third {
   font-size: 20px;
   color: black;
@@ -142,6 +141,16 @@ h3 {
   color: black;
   margin: 0;
   position: center;
+}
+
+h4 {
+  width: 50%;
+  font-size: 15px;
+  color: black;
+  text-shadow: 1px 1px 1px #cea7db;
+  padding: 0px;
+  margin-left: 27px;
+  margin-bottom: 0px;
 }
 
 .imgResponsive {
