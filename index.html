@@ -24,7 +24,9 @@
   <body>
     <div class="app">
       <div class="wrapper container">
-        <h2>What is the weather like today?</h2>
+        <div style="display: flex;">
+        </div>
+        <h2>🌤 What is the weather like today? 🌧</h2>
         <div class="row">
           <div class="col first">
             <h1>
@@ -40,7 +42,6 @@
             <form id="search-form">
             <input
               type="search"
-              style="width: 200px; height: 50px;"
               class="form-control"
               placeholder="Enter a city..."
               id="searchCity"
@@ -48,17 +49,17 @@
             </form>
             <div class="input-group-append">
               <button
-                class="btn btn-outline-secondary border-0 art"
+                class="btn btn-outline-secondary border art"
                 type="submit"
                 id="eyes"
-                onclick="displayTemperature()"
+                onclick="search(document.getElementById('searchCity').value)"
               > 🔎
               </button>
             </div>
           </div>
         </div>
         <div id="weather" class="row">
-          <div class="col-6">
+          <div class="col-6" id="actualWeather">
             <img
             src=""
               id="icon"
@@ -67,8 +68,8 @@
             <div class="float-left">
               <strong id="temperature"> </strong>
               <span class="units">
-                ºC |
-                <a href="#" id="fahrenheit-link">ºF</a>
+              <a href="#" id="celsius-link" class="active">ºC </a> | 
+              <a href="#" id="fahrenheit-link">ºF</a>
               </span>
               <div id="description"></div>
             </div>
@@ -85,7 +86,7 @@
         <div class="row">
           <h4>WEEKLY FORECAST</h4>
         </div>
-        <div class="row">
+        <div class="row" id="daysOfWeek">
           <div class="col third">
             <i class="fas fa-sun"></i>
             <h3>SUN</h3>
