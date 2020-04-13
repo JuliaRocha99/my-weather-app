@@ -31,38 +31,34 @@ function handleSubmit(event) {
   search(searchCityElement.value);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
+let fahrenheitTemperature = 0;
+
+function displayFahrenheitTemperature() {
+  let celsiusLink = document.querySelector("#celsius-link");
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement = Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
 
+function displayCelsiusTemperature() {
+  let celsiusLink = document.querySelector("#celsius-link");
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = parseFloat(temperatureElement.innerText);
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 let form = document.querySelector("#search-form");
 if (form) {
   form.addEventListener("submit", handleSubmit);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-if (fahrenheitLink) {
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-}
-
-let celsiusLink = document.querySelector("#celsius-link");
-if (celsiusLink) {
-  celsiusLink.addEventListener("click", displayCelsiusTemperature);
 }
 
 search("Porto");

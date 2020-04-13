@@ -2,12 +2,6 @@ body {
   font-family: "Arvo", bold;
 }
 
-.credit {
-  position: absolute;
-  top: 480px;
-  left: 300px;
-}
-
 .buttonLink {
   background: none !important;
   border: solid;
@@ -20,25 +14,25 @@ body {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #weather {
-  position: relative;
-  left: 137px;
+  left: 537px;
+  margin: 30px 0px 20px;
 }
 
-.wrapper {
-  margin: auto;
-  padding: 2%;
-  margin-top: 20px;
+#weatherStats span ul {
+  margin-left: auto;
+}
+
+.wrapper-container {
   height: 450px;
-  width: 750px;
-}
-
-.container {
+  width: 600px;
   margin: 30px auto;
-  padding: 15px;
+  margin-bottom: 5px;
+  padding: 15px auto;
+  padding-bottom: 5px;
   position: center;
   background: radial-gradient(
     circle,
@@ -46,7 +40,6 @@ h1 {
     rgba(148, 187, 233, 0.5956757703081232) 100%
   );
   background-size: auto;
-  height: 500px;
 }
 
 #smal {
@@ -60,8 +53,8 @@ h1 {
 }
 
 .row {
-  margin-top: 20px;
-  position: relative;
+  margin-top: 33px;
+  position: center;
 }
 
 .row1 {
@@ -90,11 +83,11 @@ h1 {
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 28px;
   color: #cea7db;
   text-shadow: 1px 1px 1px black;
-  padding: 5px;
-  margin: 10px;
+  padding: 10px;
+  margin: 15px;
   display: block;
   text-align: center;
 }
@@ -112,12 +105,6 @@ h2 {
   padding: 0px;
   margin-left: 50px;
   margin-bottom: 0px;
-}
-
-li {
-  list-style: none;
-  text-align: left;
-  margin: 0;
 }
 
 .col-6 .active {
@@ -147,15 +134,16 @@ h3 {
   margin: 0;
   position: center;
 }
-
 h4 {
-  width: 50%;
+  width: 40%;
   font-size: 15px;
   color: black;
   text-shadow: 1px 1px 1px #cea7db;
-  padding: 0px;
-  margin-left: 27px;
-  margin-bottom: 0px;
+  padding: 15px;
+  margin: 4px;
+  text-align: center;
+  position: relative;
+  left: 168px;
 }
 
 .imgResponsive {
@@ -163,7 +151,7 @@ h4 {
   height: auto;
 }
 
-@media only screen and (max-width: px) {
+@media only screen and (max-width: 250px) {
   .searchbox {
     width: 20px;
     height: 3px;
@@ -171,8 +159,8 @@ h4 {
 }
 
 .searchbox {
-  width: 250px;
-  height: 53px;
+  width: 150px;
+  height: 50px;
 }
 
 #rowing {
@@ -217,18 +205,16 @@ button {
   left: 335px;
 }
 
-.weatherElements {
-  text-align: center;
-  padding: 0px;
-  position: relative;
-  right: 0px;
-  width: 250px;
-}
-
 #currentLocation {
   padding-bottom: 45px;
   height: 10px;
   width: 120px;
+}
+
+.credit {
+  position: relative;
+  resize: horizontal;
+  top: 3px;
 }
 
 #eyes {
@@ -236,13 +222,13 @@ button {
   height: 50px;
   vertical-align: middle;
   position: absolute;
-  left: 264px;
+  left: 203px;
   line-height: -300px;
   border-style: solid;
 }
 
 #searchCity {
-  width: 350px;
+  width: 250px;
   position: absolute;
   right: 100px;
   height: 50px;
@@ -253,14 +239,25 @@ button {
 }
 
 #actualWeather {
-  width: 140px;
-  padding-left: 8px;
-  right: 10%;
+  width: 350px;
   font-size: 14px;
   margin: 0px;
   text-transform: capitalize;
 }
 
+ul {
+  position: center;
+  list-style: none;
+}
+
+#weatherElements {
+  margin: 15em;
+}
+
+.weatherElements {
+  position: relative;
+  left: -111px;
+}
 @media only screen and (max-width: 768px) {
   [class*="container"] {
     padding: 10px;
@@ -268,26 +265,39 @@ button {
   [class*="first"] {
     font-size: 24px;
   }
-  [class*="credit"] {
-    position: absolute;
-    top: 530px;
-    left: 100px;
+
+  h4 {
+    width: 50%;
+    font-size: 15px;
+    color: black;
+    text-shadow: 1px 1px 1px #cea7db;
+    padding: 15px;
+    margin: 4px;
+    text-align: center;
+    position: relative;
+    left: 127px;
   }
 
   #searchCity {
-    width: 250px;
+    width: 200px;
   }
 
   #actualWeather {
     width: 250px;
     padding-left: 8px;
-    right: 20%;
+    right: -2%;
     margin: 0px;
     text-transform: capitalize;
   }
+
   #currentLocation {
     padding-bottom: 45px;
     width: 70px;
+  }
+
+  .weatherElements {
+    position: relative;
+    left: -75px;
   }
 
   [class*="weatherElements"] {
@@ -299,7 +309,7 @@ button {
     height: 50px;
     border-color: black;
     position: absolute;
-    left: 163px;
+    left: 169px;
     vertical-align: middle;
     line-height: -300px;
     border-style: solid;

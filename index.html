@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="app">
-      <div class="wrapper container">
+      <div class="wrapper-container">
         <div style="display: flex;">
         </div>
         <h2>🌤 What is the weather like today? 🌧</h2>
@@ -68,13 +67,13 @@
             <div class="float-left">
               <strong id="temperature"> </strong>
               <span class="units">
-              <a href="#" id="celsius-link" class="active">ºC </a> | 
-              <a href="#" id="fahrenheit-link">ºF</a>
+              <a href="#" id="celsius-link" onclick="displayCelsiusTemperature()" class="active">ºC </a> | 
+              <a href="#" id="fahrenheit-link" onclick="displayFahrenheitTemperature()">ºF</a>
               </span>
               <div id="description"></div>
             </div>
           </div>
-          <div col="col-sm">
+          <div class="col-6" id="weatherStats">
             <span class="weatherElements">
               <ul>
                 <li>Humidity: <span id="humidity"></span> %</li>
@@ -108,19 +107,16 @@
             <h3>THU</h3>
           </div>
           <div class="col third">
-            <i class="fas fa-cloud"></i>
+            <i class="fas fa-sun"></i>
             <h3>FRI</h3>
             </div>
           </div>
+          <p class="credit"><a href="https://github.com/JuliaRocha99/" target="_blank">Open-source code</a>
+          by Júlia Rocha</p>
         </div>
-        <div class="credit">
-          <a href="https://github.com/JuliaRocha99/" target="_blank"
-            >Open-source code</a
-          >
-          by Júlia Rocha
-        </div>
-      </div>
+    
     </div>
+
     <script>
       let today = new Date();
       let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
