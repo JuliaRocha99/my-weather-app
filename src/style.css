@@ -39,12 +39,18 @@ h3 {
   font-size: 12px;
   color: black;
   margin-top: 0px;
-  position: center;
+  text-align: center;
 }
 
 #forecast {
   position: relative;
   bottom: 30px;
+  padding: 0px;
+}
+
+.icon2 {
+  width: 50px;
+  position: center;
 }
 
 h4 {
@@ -53,7 +59,8 @@ h4 {
   color: black;
   text-shadow: 1px 1px 1px #cea7db;
   padding: 15px;
-  margin-bottom: 0px;
+  padding-top: 0px;
+  margin-bottom: 10px;
   text-align: center;
   position: relative;
   left: 168px;
@@ -221,7 +228,7 @@ button {
 .credit {
   position: relative;
   resize: horizontal;
-  top: 65px;
+  top: 10px;
 }
 
 #eyes {
