@@ -22,99 +22,85 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-      <div class="wrapper-container">
-        <div style="display: flex;">
-        </div>
-        <h2>🌤 What is the weather like today? 🌧</h2>
-        <div class="row">
-          <div class="col first">
-            <h1>
-              <div id="city"></div>
+    <div class="wrapper-container">
+      <div style="display: flex;"></div>
+      <h2>🌤 What is the weather like today? 🌧</h2>
+      <div class="row">
+        <div class="col first">
+          <h1>
+            <div id="city"></div>
 
-              <div id="date"></div>
-            </h1>
-          </div>
-          <!-- <button id="currentLocation" onclick="currentLocation()">
+            <div id="date"></div>
+          </h1>
+        </div>
+        <!-- <button id="currentLocation" onclick="currentLocation()">
             Current Location
           </button> -->
-          <div class="col input-group mb-3">
-            <form id="search-form">
+        <div class="col input-group mb-3">
+          <form id="search-form">
             <input
               type="search"
               class="form-control"
               placeholder="Enter a city..."
               id="searchCity"
             />
-            </form>
-            <div class="input-group-append">
-              <button
-                class="btn btn-outline-secondary border art"
-                type="submit"
-                id="eyes"
-                onclick="search(document.getElementById('searchCity').value)"
-              > 🔎
-              </button>
-            </div>
+          </form>
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary border art"
+              type="submit"
+              id="eyes"
+              onclick="search(document.getElementById('searchCity').value)"
+            >
+              🔎
+            </button>
           </div>
         </div>
-        <div id="weather" class="row">
-          <div class="col-6" id="actualWeather">
-            <img
-            src=""
-              id="icon"
-              class="float-left"
-            />
-            <div class="float-left">
-              <strong id="temperature"> </strong>
-              <span class="units">
-              <a href="#" id="celsius-link" onclick="displayCelsiusTemperature()" class="active">ºC </a> | 
-              <a href="#" id="fahrenheit-link" onclick="displayFahrenheitTemperature()">ºF</a>
-              </span>
-              <div id="description"></div>
-            </div>
-          </div>
-          <div class="col-6" id="weatherStats">
-            <span class="weatherElements">
-              <ul>
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
+      </div>
+      <div id="weather" class="row">
+        <div class="col-6" id="actualWeather">
+          <img src="" id="icon" class="float-left" />
+          <div class="float-left">
+            <strong id="temperature"> </strong>
+            <span class="units">
+              <a
+                href="#"
+                id="celsius-link"
+                onclick="displayCelsiusTemperature()"
+                class="active"
+                >ºC
+              </a>
+              |
+              <a
+                href="#"
+                id="fahrenheit-link"
+                onclick="displayFahrenheitTemperature()"
+                >ºF</a
+              >
             </span>
+            <div id="description"></div>
           </div>
         </div>
-        <div class="row">
-          <h4>WEEKLY FORECAST</h4>
+        <div class="col-6" id="weatherStats">
+          <span class="weatherElements">
+            <ul>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </span>
         </div>
-        <div class="row" id="daysOfWeek">
-          <div class="col third">
-            <i class="fas fa-sun"></i>
-            <h3>SUN</h3>
-          </div>
-          <div class="col third">
-            <i class="fas fa-sun"></i>
-            <h3>MON</h3>
-          </div>
-          <div class="col third">
-            <i class="fas fa-cloud"></i>
-            <h3>TUE</h3>
-          </div>
-          <div class="col third">
-            <i class="fas fa-sun"></i>
-            <h3>WED</h3>
-          </div>
-          <div class="col third">
-            <i class="fas fa-sun"></i>
-            <h3>THU</h3>
-          </div>
-          <div class="col third">
-            <i class="fas fa-sun"></i>
-            <h3>FRI</h3>
-            </div>
-          </div>
-          <p class="credit"><a href="https://github.com/JuliaRocha99/" target="_blank">Open-source code</a>
-          by Júlia Rocha</p>
-        </div>
-    
+      </div>
+      <div class="row" id="weatherForecast">
+        <h4>WEEKLY FORECAST</h4>
+      </div>
+      <div class="row weather-forecast" id="forecast">
+        <p class="credit">
+          <a href="https://github.com/JuliaRocha99/" target="_blank"
+            >Open-source code</a
+          >
+          by Júlia Rocha
+        </p>
+      </div>
     </div>
 
     <script>

@@ -14,12 +14,54 @@ body {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #cea7db;
+  text-shadow: 1px 1px 1px black;
+  padding: 10px;
+  margin: 15px;
+  display: block;
+  text-align: center;
+}
+
+h3 {
+  font-size: 10px;
+  color: black;
+  margin: 0;
+  position: center;
+  line-height: 10px;
+}
+
+.third {
+  font-size: 12px;
+  color: black;
+  margin-top: 0px;
+  position: center;
+}
+
+#forecast {
+  position: relative;
+  bottom: 30px;
+}
+
+h4 {
+  width: 40%;
+  font-size: 21px;
+  color: black;
+  text-shadow: 1px 1px 1px #cea7db;
+  padding: 15px;
+  margin-bottom: 0px;
+  text-align: center;
+  position: relative;
+  left: 168px;
 }
 
 #weather {
   left: 537px;
-  margin: 30px 0px 20px;
+  margin: 30px 0px 0px 0px;
 }
 
 #weatherStats span ul {
@@ -53,7 +95,7 @@ h1 {
 }
 
 .row {
-  margin-top: 33px;
+  margin-top: 20px;
   position: center;
 }
 
@@ -82,16 +124,6 @@ h1 {
   width: 100%;
 }
 
-h2 {
-  font-size: 28px;
-  color: #cea7db;
-  text-shadow: 1px 1px 1px black;
-  padding: 10px;
-  margin: 15px;
-  display: block;
-  text-align: center;
-}
-
 .art {
   position: relative;
   right: 10px;
@@ -103,7 +135,7 @@ h2 {
   color: black;
   text-shadow: 1px 1px 1px #cea7db;
   padding: 0px;
-  margin-left: 50px;
+  margin-left: 75px;
   margin-bottom: 0px;
 }
 
@@ -119,31 +151,6 @@ h2 {
 .second {
   margin-left: 15px;
   display: inline;
-}
-
-.third {
-  font-size: 20px;
-  color: black;
-  margin: 10px;
-  position: center;
-}
-
-h3 {
-  font-size: 10px;
-  color: black;
-  margin: 0;
-  position: center;
-}
-h4 {
-  width: 40%;
-  font-size: 15px;
-  color: black;
-  text-shadow: 1px 1px 1px #cea7db;
-  padding: 15px;
-  margin: 4px;
-  text-align: center;
-  position: relative;
-  left: 168px;
 }
 
 .imgResponsive {
@@ -214,7 +221,7 @@ button {
 .credit {
   position: relative;
   resize: horizontal;
-  top: 3px;
+  top: 65px;
 }
 
 #eyes {
@@ -222,7 +229,7 @@ button {
   height: 50px;
   vertical-align: middle;
   position: absolute;
-  left: 203px;
+  left: 192px;
   line-height: -300px;
   border-style: solid;
 }
@@ -232,10 +239,6 @@ button {
   position: absolute;
   right: 100px;
   height: 50px;
-}
-
-#icon {
-  width: 75px;
 }
 
 #actualWeather {
@@ -250,13 +253,9 @@ ul {
   list-style: none;
 }
 
-#weatherElements {
-  margin: 15em;
-}
-
 .weatherElements {
   position: relative;
-  left: -111px;
+  left: -88px;
 }
 @media only screen and (max-width: 768px) {
   [class*="container"] {
@@ -313,10 +312,5 @@ ul {
     vertical-align: middle;
     line-height: -300px;
     border-style: solid;
-  }
-
-  #daysOfWeek {
-    position: relative;
-    bottom: 30px;
   }
 }
